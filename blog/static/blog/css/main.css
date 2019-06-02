@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'Tajawal';
+    src: url('../fonts/Tajawal-Regular.ttf') format("truetype"),
+         local('Tajawal');
+}
+/* local */
+html, body{
+    direction: rtl;
+    text-align: right;
+}
+
+body{
+    font-family: 'Tajawal', sans-serif;
+    
+}
+
+/* .bg-secondary{
+    background-color: #0C4B33 !important;
+    opacity:1;
+} */
+
+.bg-light{
+    background-color: #ccc !important;
+   
+}
+
+.bg-contant{
+    background-color: #8e8989;
+}
+
+/* end local */
+
+/* Navbar */
+.nav-link{
+    color: #FFFFFF !important;
+}
+.nav-link:hover{
+    color: #ccc !important;
+}
+
+.dropdown-menu{
+    background-color: #8e8989;
+}
+.dropdown-menu .dropdown-item{
+    text-align: left;
+    color: #FFFFFF;
+    
+}
+.dropdown-menu .dropdown-item:hover{
+    background-color: #343A40; 
+}
+/* EndNavbar */
+/* clin */
+
+.HSF{
+    color: #000;
+    border-bottom: #000 solid 2px;
+    
+}
+.CSF:hover{
+   background-color: #8e8989 !important;
+}
+
+/* Endclin */
+/* News */
+#body{
+    position: relative;
+    display:flex;
+    background:url("../images/aerial-shot.jpg") fixed center;
+    
+}
+#body > *{
+    position: relative;
+    z-index: 2;
+}
+
+#body:after{
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0,.6);    
+}
+
+.hdNews{
+    border-bottom: #FFFFFF solid 2px;
+    color: #FFFFFF;
+}
+
+/* EndNews */
+
+/* Start commit */
+.comment{
+    background-color:#f8f8f8;
+    border: 1px dashed #CCC;
+}
+/* End commit */
+
+/* Start About */
+#fteabout{
+    color: #0C4B33;
+    font-size: 20px;
+}
+
+.hedercolor{
+    color: #0C4B33;
+}
+.iconcolor{
+    color:#f7c01b;
+}
+.pabout{
+    font-size: 18px;
+}
+
+.bg-about{
+    background-color: #FFFFFF;
+}
+/* End About */
+
+/* Start footer */
+.fdordr{
+    border-color: #8e8989;
+}
+
+/* End footer */

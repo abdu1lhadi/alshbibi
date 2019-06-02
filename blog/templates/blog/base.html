@@ -1,0 +1,166 @@
+{% load static %}
+{% load post_tag %}
+<!DOCTYPE html>
+<!-- ,,, Fixed tag page ,,, -->
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/main.css' %}">
+    <link rel="shortcut icon" href="{% static 'blog/images/favicon.ico'%}">
+    {% if title %}
+    <title>FTE | {{title}}</title>
+    {% else %}
+    <title>FTE</title>
+    {% endif %}
+</head>
+<body>
+    <header class="container-fluid">
+        <!--Start NavBar-->
+        <nav class="navbar navbar-expand-lg navbar-light row p-0 d-flex align-items-end bg-contant">
+            
+            
+            <div class="collapse navbar-collapse col-md-5 m-0 p-3 bg-dark " id="navbarSupportedContent">
+                <ul class="navbar-nav ml-3" >
+                    <li class="nav-item active mr-2">
+                        <a class="nav-link" href="{% url 'home' %}">الصفحة الرئيسية <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown mr-2">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        الخدمات
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">صيانة السيارات</a>
+                            <a class="dropdown-item" href="#">غسيل السيارات</a>
+                            <a class="dropdown-item" href="#">تصاميم للسيارات</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">مقهى</a>
+                            <a class="dropdown-item" href="#">خدمة القسم النسائي</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown mr-2">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        الدورات
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">دورة ماليزيا</a>
+                            
+                        </div>
+                    </li>
+                    <li class="nav-item mr-2">
+                        <a class="nav-link" href="{% url 'about' %}">من نحن</a>
+                    </li>
+  
+                </ul>
+   
+            </div>
+
+            <div class="col-md-2 text-center m-0 p-0 ">
+                <a class="navbar-brand  bg-light m-0 p-3" href="{% url 'home' %}"><img src="{% static 'blog/images/logoshabibi.png' %}"
+                    alt="Logo FTE" width="70%">
+                </a>
+            </div>
+            <div class="col-md-5 bg-dark p-2 m-0">
+                
+                <h3><a class="nav-link" href="#">شركة الشبيبي لسيارات المحدودة</a></h3>
+            </div>
+            
+             
+            
+        </nav>
+        <!--End NavBar-->
+    </header>
+
+    <!-- Start content -->
+    <section class="d-block">
+        <div class="container-fluid p-0 bg-contant">
+            
+                     
+        <!-- This tag is for variable content and is linked from an external file -->
+        {% block content %}
+
+        {% endblock content %}
+                
+           
+        </div>
+    </section>
+    <!-- End content -->
+
+    <!-- Start Footer -->
+    <footer class="bg-dark">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md">
+                    <div class="card-group mt-3">
+                        <div class="card m-3">
+                            <h3 class="card-title text-center border-bottom p-2 m-3">من نحن</h3>
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <a class="nav-link" href="{% url 'about' %}"><img src="{% static 'blog/images/logoshabibi.png' %}" alt="شعار مدونة" width="250px"></a>
+                                </div>
+                                <p class="text-justify">
+                                    Fawaz Al Shammari Transportation Establishment FTE-Logistics was 
+                                    established in 1998 as a small inland transportation establishment 
+                                    which has grown to become one of the most leading providers of heavy 
+                                    haulage and special transportation projects in Middle East
+                                </p>
+                                
+                            </div>
+                        </div>
+                        <div class="card m-3">
+                            <h3 class="card-title text-center border-bottom p-2 m-3">الموقع</h3>
+                            <div class="card-body">
+
+                                <iframe class="ml-2 mpdammam" 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3573.305512813779!2d50.09454181487185!3d26.413615783345076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49fc9f453937d5%3A0xd918d0b00656ab97!2sTahweel+Al+Rajhi!5e0!3m2!1sen!2ssa!4v1556966572243!5m2!1sen!2ssa"
+                                 width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                 
+            
+                                
+                            </div>
+                        </div>
+                        <div class="card m-3">
+                            <h3 class="card-title text-center border-bottom p-2 m-3">وسائل التواصل الاجتماعي</h3>
+                            <h2 class="card-body text-center">
+                                <a class="text-secondary" href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                                <a class="text-secondary" href="#"><i class="fab fa-twitter" target="_blank"></i></a>
+                                <a class="text-secondary" href="#"><i class="fab fa-instagram" target="_blank"></i></a>
+                                <a class="text-secondary" href="https://www.youtube.com/watch?v=_NBMZkXxBCw&list=UUpUYc1huet10OYtDhNRucfQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                                <!-- <a class="text-secondary" href="#"><i class="fab fa-telegram"></i></a> -->
+                                <a class="text-secondary" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            </h2>
+                            <h3 class="card-title text-center border-bottom p-2 m-3">اشترك بقناتنا على اليوتيوب</h3>
+                            <h3 class="card-body text-center">
+                                <a class="" href="https://www.youtube.com/channel/UCpUYc1huet10OYtDhNRucfQ" target="_blank">مصمم السيارات محمد الشبيبي</a>
+                            </h3>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-4">
+                
+                <div class="col-md text-center">
+                    <img class="img-responsive img-fluid " src="{% static 'blog/images/2030.png' %}" alt="2030" width="10%">
+                </div>
+                
+                
+            </div>
+            
+            <div class="row p-2 border-top" >
+                <div class="col-md text-center">
+                    <small class="text-light">All Rights Are Save &copy; Abdulhadi </small>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="{% static 'blog/js/jquery-3.3.1.slim.min.js' %}"></script>
+    <script src="{% static 'blog/js/popper.min.js' %}"></script>
+    <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'blog/js/fontawesome-all.min.js' %}"></script>
+   
+</body>
+</html>
