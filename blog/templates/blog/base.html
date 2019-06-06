@@ -31,12 +31,14 @@
                         الخدمات
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">صيانة السيارات</a>
-                            <a class="dropdown-item" href="#">غسيل السيارات</a>
-                            <a class="dropdown-item" href="#">تصاميم للسيارات</a>
+                            <a class="dropdown-item" href="{% url 'external' %}">تصميم خارجي خاص لعشاق التمز</a>
+                            <a class="dropdown-item" href="{% url 'interior' %}">ديكورات داخلية بمواصفات خاصة</a>
+                            <a class="dropdown-item" href="{% url 'dyes' %}">اصباغ مميزة ذات جودة عالية</a>
+                            <a class="dropdown-item" href="{% url 'upgrading' %}">رفع اداء مستوى المحركات</a>
+                            <a class="dropdown-item" href="{% url 'europe' %}">صيانة السيارات الاوروبية والكلاسيكية</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">مقهى</a>
-                            <a class="dropdown-item" href="#">خدمة القسم النسائي</a>
+                            <a class="dropdown-item" href="{% url 'women' %}">صيانة نسائية خاصة</a>
+                            <a class="dropdown-item" href="{% url 'coffee' %}">كوفي شوب خاص في عالم السيارات</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown mr-2">
@@ -44,7 +46,7 @@
                         الدورات
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">دورة ماليزيا</a>
+                            <a class="dropdown-item" href="{% url 'course' %}">دورة ماليزيا</a>
                             
                         </div>
                     </li>
@@ -57,8 +59,8 @@
             </div>
 
             <div class="col-md-2 text-center m-0 p-0 ">
-                <a class="navbar-brand  bg-light m-0 p-3" href="{% url 'home' %}"><img src="{% static 'blog/images/logoshabibi.png' %}"
-                    alt="Logo FTE" width="70%">
+                <a class="navbar-brand  bg-light m-0 p-0" href="{% url 'home' %}"><img  class="img-responsive img-fluid" 
+                    src="{% static 'blog/images/logoshabibi.png' %}" alt="Logo FTE" width="80%" >
                 </a>
             </div>
             <div class="col-md-5 bg-dark p-2 m-0">
@@ -100,10 +102,11 @@
                                     <a class="nav-link" href="{% url 'about' %}"><img src="{% static 'blog/images/logoshabibi.png' %}" alt="شعار مدونة" width="250px"></a>
                                 </div>
                                 <p class="text-justify">
-                                    Fawaz Al Shammari Transportation Establishment FTE-Logistics was 
-                                    established in 1998 as a small inland transportation establishment 
-                                    which has grown to become one of the most leading providers of heavy 
-                                    haulage and special transportation projects in Middle East
+                                    مصمم السيارات . المهندس محمد الشبيبي 
+
+                                    عشقه للسيارات بدأ منذ الصغر
+                                    بدأ بتفكيك ألعاب السيارات ومحاولة اكتشافها وبدأت الهواية تتطور وحب السيارات يزيد في داخله ..
+                                    <a href="{% url 'about' %}">اقرأ المزيد</a>
                                 </p>
                                 
                             </div>
@@ -112,9 +115,8 @@
                             <h3 class="card-title text-center border-bottom p-2 m-3">الموقع</h3>
                             <div class="card-body">
 
-                                <iframe class="ml-2 mpdammam" 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3573.305512813779!2d50.09454181487185!3d26.413615783345076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49fc9f453937d5%3A0xd918d0b00656ab97!2sTahweel+Al+Rajhi!5e0!3m2!1sen!2ssa!4v1556966572243!5m2!1sen!2ssa"
-                                 width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d894.5914869423738!2d50.19848582918396!3d26.249783998963608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDE0JzU5LjIiTiA1MMKwMTEnNTYuNSJF!5e0!3m2!1sen!2ssa!4v1559596293608!5m2!1sen!2ssa" 
+                                width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
                                  
             
                                 
@@ -123,12 +125,13 @@
                         <div class="card m-3">
                             <h3 class="card-title text-center border-bottom p-2 m-3">وسائل التواصل الاجتماعي</h3>
                             <h2 class="card-body text-center">
-                                <a class="text-secondary" href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-                                <a class="text-secondary" href="#"><i class="fab fa-twitter" target="_blank"></i></a>
-                                <a class="text-secondary" href="#"><i class="fab fa-instagram" target="_blank"></i></a>
-                                <a class="text-secondary" href="https://www.youtube.com/watch?v=_NBMZkXxBCw&list=UUpUYc1huet10OYtDhNRucfQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                                <a class="text-danger" href="https://www.youtube.com/watch?v=_NBMZkXxBCw&list=UUpUYc1huet10OYtDhNRucfQ" 
+                                target="_blank"><i class="fab fa-youtube"></i></a>
+                                <a class="" href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                                <a class="text-warning" href="#"><i class="fab fa-instagram" target="_blank"></i></a>
+                                <a class="" href="#"><i class="fab fa-twitter" target="_blank"></i></a>
                                 <!-- <a class="text-secondary" href="#"><i class="fab fa-telegram"></i></a> -->
-                                <a class="text-secondary" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a class="text-info" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
                             </h2>
                             <h3 class="card-title text-center border-bottom p-2 m-3">اشترك بقناتنا على اليوتيوب</h3>
                             <h3 class="card-body text-center">
@@ -148,7 +151,7 @@
                 
             </div>
             
-            <div class="row p-2 border-top" >
+            <div class="row border-top" >
                 <div class="col-md text-center">
                     <small class="text-light">All Rights Are Save &copy; Abdulhadi </small>
                 </div>
